@@ -1,0 +1,15 @@
+<!doctype html>
+<html>
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <title>Demo app</title>
+</head>
+<body>
+<h1>Blogs</h1>
+<ul>
+    <li th:each="blog : ${blogs}">
+        <a th:href="@{./{id}/(id=${blog.id})}" th:text="${blog.title}" />
+    </li>
+</ul>
+</body>
+</html>
